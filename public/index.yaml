@@ -1,0 +1,298 @@
+apiVersion: v1
+entries:
+  flux:
+  - apiVersion: v2
+    appVersion: 1.18.0
+    created: "2020-03-26T23:20:48.621668+01:00"
+    dependencies:
+    - name: flux
+      repository: https://charts.fluxcd.io
+      version: 1.2.0
+    - name: helm-operator
+      repository: https://charts.fluxcd.io
+      version: 0.7.0
+    description: Flux is a tool that automatically ensures that the state of a cluster
+      matches what is specified in version control
+    digest: 6fa7c5e00f2711e860af375cbcf997854a0333ce7984851332174482a02ac626
+    home: https://fluxcd.io
+    icon: https://apps.okteto.com/flux/icon.png
+    keywords:
+    - gitops
+    - helm
+    maintainers:
+    - email: pablo@okteto.com
+      name: pablo
+    name: flux
+    sources:
+    - https://github.com/fluxcd/flux
+    - https://github.com/fluxcd/helm-operator
+    - https://github.com/okteto/charts/tress/master/flux
+    urls:
+    - https://pchico83.github.io/charts/public/flux/flux-1.2.0.tgz
+    version: 1.2.0
+  hello-world:
+  - apiVersion: v2
+    created: "2020-03-26T23:20:48.622171+01:00"
+    description: Hello world chart for Okteto Cloud
+    digest: 69a4a07009ca33e90119e100b18fecfebcdbf96ddcc4e8338c71cbc15906aa4d
+    icon: https://apps.okteto.com/hello-world/icon.png
+    name: hello-world
+    type: application
+    urls:
+    - https://pchico83.github.io/charts/public/hello-world/hello-world-0.1.0.tgz
+    version: 0.1.0
+    devs:
+    - name: hello-world
+      repo: https://github.com/okteto/go-getting-started
+      manifest: okteto.yaml
+  inlets:
+  - apiVersion: v2
+    appVersion: 2.6.4
+    created: "2020-03-26T23:20:48.622988+01:00"
+    description: Cloud Native Tunnel
+    digest: 849613755948f8aa9a1a42e09b8cb3d0d64645a48cc5acd50b45460ff6452a45
+    home: https://docs.inlets.dev/
+    icon: https://apps.okteto.com/inlets/icon.png
+    keywords:
+    - service proxy
+    - inlets
+    - tunnel
+    maintainers:
+    - email: hello@okteto.com
+      name: okteto
+    name: inlets
+    sources:
+    - https://github.com/inlets/inlets
+    type: application
+    urls:
+    - https://pchico83.github.io/charts/public/inlets/inlets-0.1.0.tgz
+    version: 0.1.0
+  mariadb:
+  - apiVersion: v2
+    appVersion: 10.3.18
+    created: "2020-03-26T23:20:48.624446+01:00"
+    description: Fast, reliable, scalable, and easy to use open-source relational
+      database system
+    digest: b700154cb73651d8318f5b64b473d73d4065e460671ba5ed8faacea272d14023
+    home: https://mariadb.org
+    icon: https://apps.okteto.com/mariadb/icon.png
+    keywords:
+    - mariadb
+    - mysql
+    - database
+    - sql
+    maintainers:
+    - email: hello@okteto.com
+      name: okteto
+    name: mariadb
+    sources:
+    - https://github.com/bitnami/bitnami-docker-mariadb
+    - https://github.com/prometheus/mysqld_exporter
+    urls:
+    - https://pchico83.github.io/charts/public/mariadb/mariadb-6.10.1.tgz
+    version: 6.10.1
+  mongodb:
+  - apiVersion: v2
+    appVersion: 4.0.12
+    created: "2020-03-26T23:20:48.626406+01:00"
+    description: NoSQL document-oriented database that stores JSON-like documents
+    digest: d3399ddd6a2a30c3745c7c894e3770cd38f24d007468b3fba19d670b6075c4e1
+    home: https://mongodb.org
+    icon: https://apps.okteto.com/mongodb/icon.png
+    keywords:
+    - mongodb
+    - database
+    - nosql
+    - cluster
+    - replicaset
+    - replication
+    maintainers:
+    - email: hello@okteto.com
+      name: okteto
+    name: mongodb
+    sources:
+    - https://github.com/bitnami/bitnami-docker-mongodb
+    urls:
+    - https://pchico83.github.io/charts/public/mongodb/mongodb-7.2.11.tgz
+    version: 7.2.11
+  movies:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2020-03-26T23:20:48.62837+01:00"
+    dependencies:
+    - name: mongodb
+      repository: https://apps.okteto.com
+      tags:
+      - movies-database
+      version: 7.x.x
+    description: A Node + React application in Kubernetes
+    digest: aab7e3227ca8741a1859256b31f3a6713a1860f4da2b1a3706769e635b2ce51c
+    icon: https://apps.okteto.com/movies/icon.png
+    name: movies
+    type: application
+    urls:
+    - https://pchico83.github.io/charts/public/movies/movies-0.1.0.tgz
+    version: 0.1.0
+    devs:
+    - name: api
+      repo: https://github.com/okteto/movies
+      manifest: api/okteto.yaml
+    - name: frontend
+      repo: https://github.com/okteto/movies
+      manifest: frontend/okteto.yaml
+  openfaas:
+  - apiVersion: v2
+    created: "2020-03-26T23:20:48.629947+01:00"
+    description: Enable Kubernetes as a backend for OpenFaaS (Functions as a Service)
+    digest: 5ff90ebc3d0959fe71cc83300496f1c062845b189410131da2994958fd2f165a
+    home: https://www.openfaas.com
+    icon: https://apps.okteto.com/openfaas/icon.png
+    keywords:
+    - functions
+    - service
+    maintainers:
+    - email: alex@openfaas.com
+      name: alexellis
+    - email: roesler.lucas@gmail.com
+      name: lucasroesler
+    - email: stefan.prodan@gmail.com
+      name: stefanprodan
+    name: openfaas
+    sources:
+    - https://github.com/openfaas/faas
+    - https://github.com/openfaas/faas-netes
+    urls:
+    - https://pchico83.github.io/charts/public/openfaas/openfaas-5.4.0.tgz
+    version: 5.4.0
+  postgresql:
+  - apiVersion: v2
+    appVersion: 11.5.0
+    created: "2020-03-26T23:20:48.631221+01:00"
+    description: An object-relational database management system
+    digest: 8189a86ab1addfd2c93405b68b7127c2b652ea92afd9509524767cd5005f41e0
+    home: https://www.postgresql.org/
+    icon: https://apps.okteto.com/postgresql/icon.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    maintainers:
+    - email: hello@okteto.com
+      name: okteto
+    name: postgresql
+    sources:
+    - https://github.com/bitnami/bitnami-docker-postgresql
+    urls:
+    - https://pchico83.github.io/charts/public/postgresql/postgresql-6.3.12.tgz
+    version: 6.3.12
+  rabbitmq:
+  - apiVersion: v2
+    appVersion: 3.7.19
+    created: "2020-03-26T23:20:48.632282+01:00"
+    description: Open source message broker software that implements AMQP
+    digest: ec659b7da03b397cda10645ac54bde9380b676688e449b2a0f7565ef48880615
+    home: https://www.rabbitmq.com
+    icon: https://apps.okteto.com/rabbitmq/icon.png
+    keywords:
+    - rabbitmq
+    - message queue
+    - AMQP
+    maintainers:
+    - email: hello@okteto.com
+      name: okteto
+    name: rabbitmq
+    sources:
+    - https://github.com/bitnami/bitnami-docker-rabbitmq
+    urls:
+    - https://pchico83.github.io/charts/public/rabbitmq/rabbitmq-6.8.2.tgz
+    version: 6.8.2
+  redis:
+  - apiVersion: v2
+    appVersion: 5.0.5
+    created: "2020-03-26T23:20:48.634542+01:00"
+    description: Open source, advanced key-value store
+    digest: 8fdbaee9524b096f761fa5dae5d76cac44a991d9c773270f503fee3f9fc4a25f
+    home: http://redis.io/
+    icon: https://apps.okteto.com/redis/icon.png
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    maintainers:
+    - email: hello@okteto.com
+      name: okteto
+    name: redis
+    sources:
+    - https://github.com/bitnami/bitnami-docker-redis
+    urls:
+    - https://pchico83.github.io/charts/public/redis/redis-9.2.2.tgz
+    version: 9.2.2
+  tensorflow-notebook:
+  - apiVersion: v1
+    appVersion: 1.6.0
+    created: "2020-03-26T23:20:48.635039+01:00"
+    description: A Helm chart for tensorflow notebook and tensorboard
+    digest: 1b13c0f26646c2d619c192cb8ec51d3ef8f96f6ad95901afa1a83a0b71b02cae
+    home: https://www.tensorflow.org
+    icon: https://apps.okteto.com/tensorflow-notebook/icon.png
+    maintainers:
+    - email: hello@okteto.com
+      name: Okteto
+    name: tensorflow-notebook
+    sources:
+    - https://github.com/tensorflow/tensorflow
+    - https://github.com/jupyter
+    urls:
+    - https://pchico83.github.io/charts/public/tensorflow-notebook/tensorflow-notebook-0.1.3.tgz
+    version: 0.1.3
+  terminal:
+  - apiVersion: v2
+    appVersion: "0.2"
+    created: "2020-03-26T23:20:48.635503+01:00"
+    description: Web-based terminal for Kubernetes powered by gotty
+    digest: 8ac6c93665f3d8821f30a7f2cb84f2a13e2079e737fee0337192f5e05cb05ea9
+    icon: https://apps.okteto.com/terminal/icon.png
+    maintainers:
+    - email: hello@okteto.com
+      name: okteto
+    name: terminal
+    type: application
+    urls:
+    - https://pchico83.github.io/charts/public/terminal/terminal-0.1.tgz
+    version: "0.1"
+  wordpress:
+  - apiVersion: v2
+    appVersion: 5.2.3
+    created: "2020-03-26T23:20:48.638845+01:00"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://apps.okteto.com/
+      tags:
+      - wordpress-database
+      version: 6.x.x
+    description: Web publishing platform for building blogs and websites
+    digest: 871cea5a0adfa9680ddabd8ce2681d07a6a46a679db0b5dc3fc50089c2248c9d
+    home: http://www.wordpress.com/
+    icon: https://apps.okteto.com/wordpress/icon.png
+    keywords:
+    - wordpress
+    - cms
+    - blog
+    - http
+    - web
+    - application
+    - php
+    maintainers:
+    - email: hello@okteto.com
+      name: okteto
+    name: wordpress
+    sources:
+    - https://github.com/bitnami/bitnami-docker-wordpress
+    urls:
+    - https://pchico83.github.io/charts/public/wordpress/wordpress-7.3.9.tgz
+    version: 7.3.9
+generated: "2020-03-26T23:20:48.617966+01:00"

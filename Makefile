@@ -1,4 +1,4 @@
-URL?=https://apps.okteto.com
+URL?=https://pchico83.github.io/charts/public
 DIRS = $(shell ls -d -- */ | grep -v public)
 
 .PHONY: all clean package index publish $(DIRS)
